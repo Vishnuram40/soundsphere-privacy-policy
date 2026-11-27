@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-mode="dark" data-accent="default">
 <head>
   <meta charset="UTF-8" />
@@ -233,7 +233,7 @@
   <!-- Header -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="../index.html" class="brand">
+      <a href="index.html" class="brand">
         <div class="brand-icon" aria-hidden="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="9" opacity="0.35"></circle>
@@ -249,11 +249,11 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../version-history.html">Version History</a></li>
-        <li><a href="../release-notes.html">Release Notes</a></li>
-        <li><a href="./" class="active">Privacy Policy</a></li>
-        <li><a href="../terms-of-service.html">Terms of Service</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="version-history.html">Version History</a></li>
+        <li><a href="release-notes.html">Release Notes</a></li>
+        <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -262,15 +262,15 @@
           <button class="mode-btn" data-mode-btn="light">Light</button>
           <button class="mode-btn active" data-mode-btn="dark">Dark</button>
         </div>
-        <a href="../index.html" class="btn btn-primary">← Back to Website</a>
+        <a href="index.html" class="btn btn-primary">← Back to Website</a>
       </div>
     </div>
     <nav class="container subnav-mobile" aria-label="Mobile Navigation">
-      <a href="../index.html">Home</a>
-      <a href="../version-history.html">Version History</a>
-      <a href="../release-notes.html">Release Notes</a>
-      <a href="./" class="active">Privacy Policy</a>
-      <a href="../terms-of-service.html">Terms of Service</a>
+      <a href="index.html">Home</a>
+      <a href="version-history.html">Version History</a>
+      <a href="release-notes.html">Release Notes</a>
+      <a href="privacy-policy.html" class="active">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
     </nav>
   </header>
 
@@ -278,7 +278,7 @@
     <article class="glass-card doc-shell">
       <div class="doc-eyebrow">Google Play Compliant • 100% Local Audio</div>
       <h1 class="doc-title">Privacy Policy for <span class="gradient-text">SoundSphere</span></h1>
-      <div class="doc-meta">Last updated: August 17, 2026 • Application: SoundSphere (Aura Music)</div>
+      <div class="doc-meta">Last updated: November 27, 2026 • Application: SoundSphere (Aura Music)</div>
 
       <section class="doc-section">
         <p>
@@ -312,12 +312,57 @@
       </section>
 
       <section class="doc-section">
-        <h2><span class="doc-num">02.</span> AI Mood Playlist Generator (Gemini Integration)</h2>
-        <p>When you use the AI Mood tab, the natural language prompt you type (e.g., <em>"Workout rush"</em> or <em>"Rainy day chill"</em>) is processed via secure API to match your library's tempo and genres.</p>
-        <ul class="doc-list">
-          <li>No personal identifying information (PII) is sent with your mood prompts.</li>
-          <li>Prompts are processed in transit via secure HTTPS encryption.</li>
-        </ul>
+        <h2><span class="doc-num">02.</span> Optional AI Features and User-Provided API Keys (BYOK Policy)</h2>
+        <p>
+          SoundSphere offers optional artificial intelligence capabilities, including <strong>AI Mood Playlist Generation</strong> and natural-language library discovery. We maintain an uncompromising approach to privacy, user autonomy, and data minimization:
+        </p>
+
+        <div class="info-box">
+          <h3>Disabled by Default &amp; Strictly Opt-In</h3>
+          <p>
+            All AI-powered features are <strong>disabled by default</strong> upon installation. SoundSphere makes zero outbound AI network connections, queries, or telemetry calls unless and until a user explicitly chooses to enable AI capabilities within the app settings.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>User-Provided API Keys (No Bundled or Shared Keys)</h3>
+          <p>
+            SoundSphere <strong>does not provide, embed, distribute, or bundle its own Gemini API key</strong> or any proprietary AI credentials. SoundSphere operates strictly under a <strong>"Bring Your Own Key" (BYOK)</strong> model. To activate optional AI capabilities, users must voluntarily obtain and connect their own personal third-party API key (such as a Google AI Studio Gemini API key) through the app settings.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Local On-Device Key Security &amp; Storage</h3>
+          <p>
+            When a user configures an API key, it is stored strictly and locally on the user's physical device using Android's encrypted private storage (<code>EncryptedSharedPreferences</code>). <strong>SoundSphere developers never see, collect, log, or transmit your API key</strong> to any intermediary server. Users can delete, clear, or modify their API key at any time directly in Settings.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Data Transmission During AI Processing</h3>
+          <p>
+            When a user actively invokes an AI feature (for example, generating a playlist by submitting a prompt such as <em>"Workout rush with heavy bass"</em> or <em>"Rainy afternoon study session"</em>):
+          </p>
+          <ul class="doc-list" style="margin-top:0.45rem;">
+            <li>The specific text prompt and minimal relevant genre/tempo parameters are transmitted directly from your device to the selected third-party AI provider (e.g., Google Gemini API) via secure HTTPS/TLS encryption.</li>
+            <li><strong>No Personally Identifiable Information (PII)</strong>, names, email addresses, device identifiers (IMEI/AAID), contact lists, location data, or audio files are ever included or transmitted in the AI request.</li>
+            <li>Requests are routed directly to the third-party provider's official API endpoints without routing through any developer-owned proxy servers.</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h3>Third-Party Provider Terms &amp; User Responsibility</h3>
+          <p>
+            Users are solely responsible for obtaining, managing, and maintaining the security of their own API keys. Use of third-party AI services is governed by the respective provider's terms of service and privacy policies (e.g., <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google Privacy Policy</a> and <a href="https://ai.google.dev/terms" target="_blank" rel="noopener" class="inline-link">Google AI Terms of Service</a>). Users are responsible for complying with the provider's acceptable use guidelines, token quotas, and rate limits.
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>100% Offline Core Music Player Guarantee</h3>
+          <p>
+            Users can choose not to connect an API key and enjoy SoundSphere as a completely offline local music player without missing any audio capabilities. All core features — including lossless audio playback (FLAC, MP3, WAV, AAC, OGG, M4A), the 10-Band Pro Studio Equalizer, real-time audio visualizers, playlist management, metadata tag editing, and sleep timer — remain 100% functional with zero internet access, zero account creation, and zero API keys.
+          </p>
+        </div>
       </section>
 
       <section class="doc-section">
@@ -383,12 +428,12 @@
     <div class="container">
       <div class="footer-row">
         <div class="footer-nav">
-          <a href="../index.html">Home</a>
-          <a href="../version-history.html">Version History</a>
-          <a href="../release-notes.html">Release Notes</a>
-          <a href="./" class="active">Privacy Policy</a>
-          <a href="../terms-of-service.html">Terms of Service</a>
-          <a href="../sitemap.xml" target="_blank">Sitemap</a>
+          <a href="index.html">Home</a>
+          <a href="version-history.html">Version History</a>
+          <a href="release-notes.html">Release Notes</a>
+          <a href="privacy-policy.html" class="active">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="sitemap.xml" target="_blank">Sitemap</a>
         </div>
         <div class="swatch-strip" aria-label="Aura Color Switcher">
           <span style="font-size:0.72rem;font-weight:700;color:var(--text-muted);">AURA:</span>
@@ -436,4 +481,3 @@
   </script>
 </body>
 </html>
-
