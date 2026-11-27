@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-mode="dark" data-accent="default">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Privacy Policy — SoundSphere (Aura Music)</title>
+  <meta name="description" content="Privacy Policy for SoundSphere (Aura Music) — offline Hi-Res local audio player." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #818CF8; --accent-2: #A78BFA;
+      --accent-rgb: 129, 140, 248; --accent-2-rgb: 167, 139, 250;
+      --on-accent: #090A14;
+      --bg-primary: #070812; --bg-secondary: #0D1021;
+      --bg-card: rgba(20, 24, 46, 0.65); --bg-card-solid: #12162B;
+      --bg-glass: rgba(255, 255, 255, 0.045);
+      --border-subtle: rgba(255, 255, 255, 0.09); --border-strong: rgba(255, 255, 255, 0.17);
+      --text-primary: #F8FAFC; --text-secondary: #A6B0CA; --text-muted: #6C7694;
+      --shadow-glow: 0 24px 80px -16px rgba(var(--accent-rgb), 0.32);
+      --shadow-card: 0 20px 50px -20px rgba(0, 0, 0, 0.65);
+      --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-display: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    }
+    html[data-resolved-mode="light"] {
+      --bg-primary: #F5F7FC; --bg-secondary: #EAEFF9;
+      --bg-card: rgba(255, 255, 255, 0.8); --bg-card-solid: #FFFFFF;
+      --bg-glass: rgba(15, 23, 42, 0.04);
+      --border-subtle: rgba(15, 23, 42, 0.08); --border-strong: rgba(15, 23, 42, 0.16);
+      --text-primary: #0B1120; --text-secondary: #475569; --text-muted: #64748B;
+      --shadow-glow: 0 24px 70px -16px rgba(var(--accent-rgb), 0.25);
+      --shadow-card: 0 18px 40px -20px rgba(15, 23, 42, 0.14);
+    }
+    html[data-accent="default"] { --accent:#818CF8; --accent-2:#A78BFA; --accent-rgb:129,140,248; --accent-2-rgb:167,139,250; --on-accent:#070814; }
+    html[data-accent="amoled"]  { --accent:#10B981; --accent-2:#34D399; --accent-rgb:16,185,129; --accent-2-rgb:52,211,153; --on-accent:#03150E; }
+    html[data-resolved-mode="dark"][data-accent="amoled"] { --bg-primary:#000000; --bg-secondary:#030705; --bg-card:rgba(10,14,12,0.84); --bg-card-solid:#060908; }
+    html[data-accent="sunset"]  { --accent:#F97316; --accent-2:#F59E0B; --accent-rgb:249,115,22; --accent-2-rgb:245,158,11; --on-accent:#180B02; }
+    html[data-accent="ocean"]   { --accent:#38BDF8; --accent-2:#0EA5E9; --accent-rgb:56,189,248; --accent-2-rgb:14,165,233; --on-accent:#04131D; }
+    html[data-accent="rose"]    { --accent:#F43F5E; --accent-2:#FB7185; --accent-rgb:244,63,94; --accent-2-rgb:251,113,133; --on-accent:#1C050A; }
+    html[data-accent="violet"]  { --accent:#A855F7; --accent-2:#D946EF; --accent-rgb:168,85,247; --accent-2-rgb:217,70,239; --on-accent:#130420; }
+    html[data-accent="matrix"]  { --accent:#00E676; --accent-2:#76FF03; --accent-rgb:0,230,118; --accent-2-rgb:118,255,3; --on-accent:#021409; }
+    html[data-accent="sakura"]  { --accent:#FF4081; --accent-2:#FF80AB; --accent-rgb:255,64,129; --accent-2-rgb:255,128,171; --on-accent:#1D040D; }
+    html[data-accent="aurora"]  { --accent:#00E5FF; --accent-2:#1DE9B6; --accent-rgb:0,229,255; --accent-2-rgb:29,233,182; --on-accent:#02161A; }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: clip;
+      -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.45s var(--ease-out), color 0.35s var(--ease-out);
+    }
+    .aura-backdrop { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+    .aura-orb { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.28; transition: background 0.6s var(--ease-out); }
+    html[data-resolved-mode="light"] .aura-orb { opacity: 0.18; }
+    .aura-orb-1 { width: 580px; height: 580px; top: -160px; left: -120px; background: radial-gradient(circle, rgba(var(--accent-rgb), 0.85), transparent 70%); }
+    .aura-orb-2 { width: 520px; height: 520px; top: 30%; right: -140px; background: radial-gradient(circle, rgba(var(--accent-2-rgb), 0.78), transparent 70%); }
+    .aura-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(to right, var(--border-subtle) 1px, transparent 1px), linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 10%, #000 30%, transparent 100%);
+      opacity: 0.32;
+    }
+
+    .container { width: min(1200px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-card);
+    }
+    .gradient-text { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    /* Navbar */
+    .navbar {
+      position: sticky; top: 0; z-index: 90; padding: 0.82rem 0;
+      backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+      background: rgba(7, 8, 18, 0.78);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    html[data-resolved-mode="light"] .navbar { background: rgba(245, 247, 252, 0.86); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand { display: inline-flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text-primary); }
+    .brand-icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center; color: var(--on-accent);
+      box-shadow: 0 8px 24px -6px rgba(var(--accent-rgb), 0.6);
+    }
+    .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; }
+    .brand-sub { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 0.05em; }
+    .nav-links {
+      display: flex; align-items: center; gap: 0.35rem; list-style: none;
+      padding: 0.28rem; border-radius: 14px; background: var(--bg-glass); border: 1px solid var(--border-subtle);
+    }
+    .nav-links a {
+      color: var(--text-secondary); text-decoration: none; font-size: 0.84rem; font-weight: 600;
+      padding: 0.42rem 0.78rem; border-radius: 10px; transition: all 0.2s ease;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); background: rgba(var(--accent-rgb), 0.14); }
+    .nav-actions { display: flex; align-items: center; gap: 0.6rem; }
+    .mode-pill { display: inline-flex; background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 3px; gap: 2px; }
+    .mode-btn {
+      border: none; background: transparent; color: var(--text-secondary); font-family: var(--font-sans);
+      font-size: 0.75rem; font-weight: 600; padding: 0.36rem 0.62rem; border-radius: 9px; cursor: pointer;
+    }
+    .mode-btn.active { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.45rem; font-family: var(--font-sans); font-weight: 600;
+      font-size: 0.84rem; padding: 0.55rem 1rem; border-radius: 11px; text-decoration: none; cursor: pointer;
+      border: 1px solid var(--border-strong); background: var(--bg-glass); color: var(--text-primary); transition: all 0.2s ease;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent); border-color: transparent; }
+    .btn-primary:hover { color: var(--on-accent); box-shadow: 0 10px 24px -6px rgba(var(--accent-rgb), 0.55); }
+
+    /* Document Layout */
+    main { padding: 3rem 0 4.5rem; }
+    .doc-shell { max-width: 880px; margin-inline: auto; padding: 2.6rem; }
+    .doc-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.36rem 0.85rem; border-radius: 999px;
+      background: rgba(var(--accent-rgb), 0.12); border: 1px solid rgba(var(--accent-rgb), 0.32);
+      color: var(--accent); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+    .doc-title { font-family: var(--font-display); font-size: clamp(1.9rem, 3.6vw, 2.7rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.5rem; }
+    .doc-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); margin-bottom: 2rem; }
+    .doc-section { margin-bottom: 2rem; }
+    .doc-section h2 { font-family: var(--font-display); font-size: 1.24rem; margin-bottom: 0.7rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem; }
+    .doc-num { color: var(--accent); font-family: var(--font-mono); }
+    .doc-section p, .doc-list li { color: var(--text-secondary); font-size: 0.94rem; margin-bottom: 0.65rem; overflow-wrap: anywhere; }
+    .doc-list { padding-left: 1.25rem; display: grid; gap: 0.35rem; }
+    .info-box {
+      padding: 1rem 1.15rem; border-radius: 16px; background: var(--bg-glass);
+      border: 1px solid var(--border-subtle); margin-bottom: 0.75rem;
+    }
+    .info-box h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; overflow-wrap: anywhere; }
+    .info-box p { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0; }
+    .inline-link { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .inline-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid rgba(var(--accent-rgb), 0.26);
+      background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05), rgba(0, 0, 0, 0.22));
+      padding: 3rem 0 2rem; color: var(--text-secondary); font-size: 0.86rem;
+    }
+    html[data-resolved-mode="light"] .site-footer { background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05), rgba(15, 23, 42, 0.03)); }
+    .footer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); }
+    .footer-nav { display: flex; flex-wrap: wrap; gap: 1.15rem; }
+    .footer-nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.84rem; }
+    .footer-nav a:hover, .footer-nav a.active { color: var(--accent); }
+    .swatch-strip { display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+    .swatch-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; transition: transform 0.2s ease; }
+    .swatch-dot.active { border-color: var(--text-primary); transform: scale(1.15); }
+    .footer-bottom { padding-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; font-size: 0.78rem; color: var(--text-muted); }
+
+    .subnav-mobile {
+      display: none;
+      margin-top: 0.65rem;
+      gap: 0.45rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+    .subnav-mobile::-webkit-scrollbar { display: none; }
+    .subnav-mobile a {
+      flex-shrink: 0;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      padding: 0.38rem 0.75rem;
+      border-radius: 999px;
+      background: var(--bg-glass);
+      border: 1px solid var(--border-subtle);
+    }
+    .subnav-mobile a.active, .subnav-mobile a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(var(--accent-rgb), 0.14);
+    }
+
+    @media (max-width: 1120px) and (min-width: 861px) {
+      .nav-links a { font-size: 0.78rem; padding: 0.38rem 0.6rem; }
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .subnav-mobile { display: flex; }
+      main { padding: 2rem 0 3.25rem; }
+      .doc-shell { padding: 1.6rem; border-radius: 20px; }
+    }
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 1.25rem); }
+      .brand-sub { display: none; }
+      .nav-actions { gap: 0.4rem; }
+      .mode-btn { padding: 0.32rem 0.48rem; font-size: 0.7rem; }
+      .btn { padding: 0.48rem 0.75rem; font-size: 0.76rem; }
+      .doc-shell { padding: 1.2rem; border-radius: 18px; }
+      .site-footer { padding: 2.25rem 0 calc(1.75rem + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (hover: none) {
+      .btn:hover { transform: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="aura-backdrop" aria-hidden="true">
+    <div class="aura-orb aura-orb-1"></div>
+    <div class="aura-orb aura-orb-2"></div>
+    <div class="aura-grid"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9" opacity="0.35"></circle>
+            <path d="M9 18V5l11-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="17" cy="16" r="3"></circle>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">SoundSphere</span>
+          <span class="brand-sub">AURA MUSIC PLAYER</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../version-history.html">Version History</a></li>
+        <li><a href="../release-notes.html">Release Notes</a></li>
+        <li><a href="./" class="active">Privacy Policy</a></li>
+        <li><a href="../terms-of-service.html">Terms of Service</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="mode-pill" role="group" aria-label="Theme Mode">
+          <button class="mode-btn" data-mode-btn="system">Sys</button>
+          <button class="mode-btn" data-mode-btn="light">Light</button>
+          <button class="mode-btn active" data-mode-btn="dark">Dark</button>
+        </div>
+        <a href="../index.html" class="btn btn-primary">← Back to Website</a>
+      </div>
+    </div>
+    <nav class="container subnav-mobile" aria-label="Mobile Navigation">
+      <a href="../index.html">Home</a>
+      <a href="../version-history.html">Version History</a>
+      <a href="../release-notes.html">Release Notes</a>
+      <a href="./" class="active">Privacy Policy</a>
+      <a href="../terms-of-service.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <article class="glass-card doc-shell">
+      <div class="doc-eyebrow">Google Play Compliant • 100% Local Audio</div>
+      <h1 class="doc-title">Privacy Policy for <span class="gradient-text">SoundSphere</span></h1>
+      <div class="doc-meta">Last updated: August 17, 2026 • Application: SoundSphere (Aura Music)</div>
+
+      <section class="doc-section">
+        <p>
+          Welcome to <strong>SoundSphere</strong> ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how our local music player and audio workstation application collects, uses, and safeguards your information when you use our mobile application.
+        </p>
+        <p>
+          SoundSphere is designed as a privacy-focused local offline audio player. <strong>We do not sell, rent, or monetize your personal data.</strong>
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">01.</span> Permissions &amp; Information We Access</h2>
+        <p>To deliver local playback and audio customization features, SoundSphere requires specific device permissions strictly for on-device functionality:</p>
+
+        <div class="info-box">
+          <h3>READ_MEDIA_AUDIO / Storage Permission</h3>
+          <p>Used solely to scan, index, and playback your locally stored music files (MP3, FLAC, WAV, AAC, OGG, M4A) on your device. Your audio files are never uploaded to any external server.</p>
+        </div>
+        <div class="info-box">
+          <h3>RECORD_AUDIO / Visualizer API</h3>
+          <p>Required strictly by the Android Visualizer engine to capture live audio frequency bands in real-time and render the 16-bar waveform animations. We <strong>do not record, save, or transmit</strong> your voice or ambient microphone audio.</p>
+        </div>
+        <div class="info-box">
+          <h3>POST_NOTIFICATIONS / Foreground Service</h3>
+          <p>Required to display persistent media playback controls in your notification tray and lock screen (Play/Pause, Track Seek, Mood Effects Switcher) while the app runs smoothly in the background.</p>
+        </div>
+        <div class="info-box">
+          <h3>WRITE_SETTINGS (Ringtone Maker)</h3>
+          <p>Used only when you explicitly choose to set a trimmed audio track as your phone ringtone, notification, or alarm tone.</p>
+        </div>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">02.</span> AI Mood Playlist Generator (Gemini Integration)</h2>
+        <p>When you use the AI Mood tab, the natural language prompt you type (e.g., <em>"Workout rush"</em> or <em>"Rainy day chill"</em>) is processed via secure API to match your library's tempo and genres.</p>
+        <ul class="doc-list">
+          <li>No personal identifying information (PII) is sent with your mood prompts.</li>
+          <li>Prompts are processed in transit via secure HTTPS encryption.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">03.</span> Local Storage &amp; Room Database</h2>
+        <p>
+          All playback statistics (Total Listening Hours, Most Played Hits, Aura Insights), custom playlists, favorite songs, and 10-Band equalizer presets are stored strictly on your device's local Room SQLite Database.
+        </p>
+        <p>
+          When you use the <strong>Database Backup &amp; Restore</strong> tool, the exported JSON file is stored locally in your chosen directory or shared only via your device's native Android share sheet.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">04.</span> Third-Party Services, Analytics &amp; Advertisements</h2>
+        <p>
+          While the current version of SoundSphere focuses on local offline playback, we may integrate third-party services in upcoming versions to maintain application performance, diagnose crashes, and support ongoing development:
+        </p>
+        <div class="info-box">
+          <h3>Google Play Services</h3>
+          <p>Used for basic app infrastructure, licensing checks, and automatic in-app updates.</p>
+        </div>
+        <div class="info-box">
+          <h3>Third-Party Advertising (e.g., Google AdMob)</h3>
+          <p>Future updates may display non-intrusive advertisements provided by Google AdMob or certified ad partners. These partners may collect pseudonymous identifiers such as your device's <strong>Android Advertising ID (AAID)</strong>, IP address, and interaction data. You can reset or opt out anytime via Android Settings (<em>Settings ➔ Google ➔ Ads</em>).</p>
+        </div>
+        <div class="info-box">
+          <h3>Analytics &amp; Performance Monitoring (e.g., Firebase)</h3>
+          <p>We may utilize diagnostic SDKs (such as Firebase Analytics or Crashlytics) to collect aggregated, anonymous crash logs and load times to optimize audio engine performance across Android devices.</p>
+        </div>
+        <p style="font-size:0.82rem;color:var(--text-muted);">
+          All third-party partners adhere to strict data protection standards (e.g., <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google Privacy &amp; Terms</a>).
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">05.</span> Children's Privacy (COPPA Compliance)</h2>
+        <p>SoundSphere does not knowingly collect or solicit any personal information from children under the age of 13. If you believe a child has provided us with personal data, please contact us, and we will promptly remove it.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">06.</span> Security of Your Data</h2>
+        <p>Because your music files and listening statistics remain locally on your physical device, your security is protected by your device security and standard Android sandbox protections.</p>
+      </section>
+
+      <section class="doc-section">
+        <h2><span class="doc-num">07.</span> Updates to This Policy</h2>
+        <p>We may update our Privacy Policy periodically to reflect new features or regulatory requirements. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+      </section>
+
+      <section class="doc-section" style="margin-bottom:0;">
+        <h2><span class="doc-num">08.</span> Contact Us</h2>
+        <p>If you have any questions, feedback, or concerns regarding this Privacy Policy, please contact our team:</p>
+        <div class="info-box" style="margin-bottom:0;">
+          <h3>SoundSphere Support Team</h3>
+          <p>Email: <a href="mailto:soundsphere.support@gmail.com" class="inline-link">soundsphere.support@gmail.com</a> • Application: SoundSphere Music Player (Android)</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../version-history.html">Version History</a>
+          <a href="../release-notes.html">Release Notes</a>
+          <a href="./" class="active">Privacy Policy</a>
+          <a href="../terms-of-service.html">Terms of Service</a>
+          <a href="../sitemap.xml" target="_blank">Sitemap</a>
+        </div>
+        <div class="swatch-strip" aria-label="Aura Color Switcher">
+          <span style="font-size:0.72rem;font-weight:700;color:var(--text-muted);">AURA:</span>
+          <button class="swatch-dot active" data-accent-pick="default" title="Default Theme" style="background:linear-gradient(135deg,#818CF8,#A78BFA)"></button>
+          <button class="swatch-dot" data-accent-pick="amoled" title="AMOLED Pitch Black" style="background:linear-gradient(135deg,#000000,#10B981)"></button>
+          <button class="swatch-dot" data-accent-pick="sunset" title="Sunset Ember" style="background:linear-gradient(135deg,#F97316,#F59E0B)"></button>
+          <button class="swatch-dot" data-accent-pick="ocean" title="Ocean Sapphire" style="background:linear-gradient(135deg,#0F172A,#38BDF8)"></button>
+          <button class="swatch-dot" data-accent-pick="rose" title="Radiant Rose" style="background:linear-gradient(135deg,#F43F5E,#FB7185)"></button>
+          <button class="swatch-dot" data-accent-pick="violet" title="Electric Violet" style="background:linear-gradient(135deg,#A855F7,#D946EF)"></button>
+          <button class="swatch-dot" data-accent-pick="matrix" title="Cyberpunk Matrix" style="background:linear-gradient(135deg,#00E676,#76FF03)"></button>
+          <button class="swatch-dot" data-accent-pick="sakura" title="Sakura Blossom" style="background:linear-gradient(135deg,#FF4081,#FF80AB)"></button>
+          <button class="swatch-dot" data-accent-pick="aurora" title="Cosmic Aurora" style="background:linear-gradient(135deg,#00E5FF,#1DE9B6)"></button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SoundSphere (Aura Music). All Rights Reserved.</span>
+        <span>100% Offline Privacy • Google Play Compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const sys = window.matchMedia('(prefers-color-scheme: dark)');
+      let mode = localStorage.getItem('soundsphere_mode') || 'dark';
+      let accent = localStorage.getItem('soundsphere_accent') || 'default';
+
+      function applyTheme() {
+        const resolved = mode === 'system' ? (sys.matches ? 'dark' : 'light') : mode;
+        document.documentElement.setAttribute('data-mode', mode);
+        document.documentElement.setAttribute('data-resolved-mode', resolved);
+        document.documentElement.setAttribute('data-accent', accent);
+        document.querySelectorAll('[data-mode-btn]').forEach(b => b.classList.toggle('active', b.dataset.modeBtn === mode));
+        document.querySelectorAll('[data-accent-pick]').forEach(b => b.classList.toggle('active', b.dataset.accentPick === accent));
+      }
+      sys.addEventListener('change', () => { if (mode === 'system') applyTheme(); });
+      document.querySelectorAll('[data-mode-btn]').forEach(b => b.addEventListener('click', () => {
+        mode = b.dataset.modeBtn; localStorage.setItem('soundsphere_mode', mode); applyTheme();
+      }));
+      document.querySelectorAll('[data-accent-pick]').forEach(b => b.addEventListener('click', () => {
+        accent = b.dataset.accentPick; localStorage.setItem('soundsphere_accent', accent); applyTheme();
+      }));
+      applyTheme();
+    })();
+  </script>
+</body>
+</html>
+
